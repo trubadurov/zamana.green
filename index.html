@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamana Green - HTML Framework для медицинских консультаций</title>
+    <link rel="stylesheet" href="zamana.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-brand">Zamana.Green</a>
+            <button class="navbar-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="navbar-menu" id="navMenu">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#doctors">Врачи</a></li>
+                <li><a href="#questions">Вопросы</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contact" class="btn btn-primary btn-sm">Задать вопрос</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1 class="hero-title">Получите консультацию врача онлайн</h1>
+            <p class="hero-subtitle">Задайте вопрос врачу и получите профессиональный ответ в течение 24 часов</p>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Найти информацию о заболевании или симптоме...">
+                    <button class="search-btn">Поиск</button>
+                </div>
+            </div>
+            
+            <div style="margin-top: var(--spacing-xl);">
+                <a href="#questions" class="btn btn-primary btn-lg">Задать вопрос врачу</a>
+                <a href="#doctors" class="btn btn-outline btn-lg" style="margin-left: var(--spacing-md);">Наши врачи</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section class="section" id="doctors">
+        <div class="container">
+            <h2 class="section-title">Наши специалисты</h2>
+            <p class="section-subtitle">Квалифицированные врачи готовы ответить на ваши вопросы</p>
+            
+            <div class="grid grid-4">
+                <div class="card doctor-card">
+                    <img src="https://via.placeholder.com/100" alt="Доктор" class="doctor-avatar">
+                    <h3 class="doctor-name">Иванова Елена</h3>
+                    <p class="doctor-specialty">Терапевт</p>
+                    <div class="doctor-rating">
+                        <span>⭐ 4.9</span>
+                        <span class="badge badge-success">Онлайн</span>
+                    </div>
+                    <p style="font-size: 14px; color: var(--gray); margin-bottom: var(--spacing-md);">
+                        15+ лет опыта<br>
+                        500+ консультаций
+                    </p>
+                    <a href="#" class="btn btn-primary">Консультация</a>
+                </div>
+                
+                <div class="card doctor-card">
+                    <img src="https://via.placeholder.com/100" alt="Доктор" class="doctor-avatar">
+                    <h3 class="doctor-name">Петров Александр</h3>
+                    <p class="doctor-specialty">Кардиолог</p>
+                    <div class="doctor-rating">
+                        <span>⭐ 4.8</span>
+                        <span class="badge badge-info">Скоро</span>
+                    </div>
+                    <p style="font-size: 14px; color: var(--gray); margin-bottom: var(--spacing-md);">
+                        12+ лет опыта<br>
+                        450+ консультаций
+                    </p>
+                    <a href="#" class="btn btn-primary">Консультация</a>
+                </div>
+                
+                <div class="card doctor-card">
+                    <img src="https://via.placeholder.com/100" alt="Доктор" class="doctor-avatar">
+                    <h3 class="doctor-name">Смирнова Ольга</h3>
+                    <p class="doctor-specialty">Педиатр</p>
+                    <div class="doctor-rating">
+                        <span>⭐ 5.0</span>
+                        <span class="badge badge-success">Онлайн</span>
+                    </div>
+                    <p style="font-size: 14px; color: var(--gray); margin-bottom: var(--spacing-md);">
+                        18+ лет опыта<br>
+                        600+ консультаций
+                    </p>
+                    <a href="#" class="btn btn-primary">Консультация</a>
+                </div>
+                
+                <div class="card doctor-card">
+                    <img src="https://via.placeholder.com/100" alt="Доктор" class="doctor-avatar">
+                    <h3 class="doctor-name">Козлов Дмитрий</h3>
+                    <p class="doctor-specialty">Дерматолог</p>
+                    <div class="doctor-rating">
+                        <span>⭐ 4.7</span>
+                        <span class="badge badge-success">Онлайн</span>
+                    </div>
+                    <p style="font-size: 14px; color: var(--gray); margin-bottom: var(--spacing-md);">
+                        10+ лет опыта<br>
+                        380+ консультаций
+                    </p>
+                    <a href="#" class="btn btn-primary">Консультация</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Questions Section -->
+    <section class="section" id="questions" style="background-color: var(--white);">
+        <div class="container">
+            <h2 class="section-title">Недавние вопросы</h2>
+            <p class="section-subtitle">Посмотрите ответы врачей на вопросы других пациентов</p>
+            
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="question-card">
+                    <div class="question-header">
+                        <div>
+                            <h3 class="question-title">Частые головные боли - что делать?</h3>
+                            <p class="question-meta">
+                                <span>Анна, 34 года</span> • 
+                                <span>2 часа назад</span>
+                            </p>
+                        </div>
+                        <span class="question-status status-answered">Отвечено</span>
+                    </div>
+                    <p class="question-content">
+                        Здравствуйте! Последние две недели меня беспокоят частые головные боли, 
+                        особенно во второй половине дня. Боль умеренная, давящая, в области лба и висков...
+                    </p>
+                    <div class="question-tags">
+                        <span class="tag">Неврология</span>
+                        <span class="tag">Головная боль</span>
+                        <span class="tag">Терапия</span>
+                    </div>
+                </div>
+                
+                <div class="question-card">
+                    <div class="question-header">
+                        <div>
+                            <h3 class="question-title">Температура у ребенка 3 дня</h3>
+                            <p class="question-meta">
+                                <span>Мария, 29 лет</span> • 
+                                <span>4 часа назад</span>
+                            </p>
+                        </div>
+                        <span class="question-status status-answered">Отвечено</span>
+                    </div>
+                    <p class="question-content">
+                        У ребенка (5 лет) третий день держится температура 37.5-38. Других симптомов пока нет. 
+                        Какие могут быть причины и стоит ли давать жаропонижающее?
+                    </p>
+                    <div class="question-tags">
+                        <span class="tag">Педиатрия</span>
+                        <span class="tag">Температура</span>
+                    </div>
+                </div>
+                
+                <div class="question-card">
+                    <div class="question-header">
+                        <div>
+                            <h3 class="question-title">Красные пятна на коже</h3>
+                            <p class="question-meta">
+                                <span>Игорь, 42 года</span> • 
+                                <span>6 часов назад</span>
+                            </p>
+                        </div>
+                        <span class="question-status status-pending">Ожидает ответа</span>
+                    </div>
+                    <p class="question-content">
+                        Неделю назад на руках появились красные пятна, немного зудят. 
+                        Что это может быть и к какому врачу обратиться?
+                    </p>
+                    <div class="question-tags">
+                        <span class="tag">Дерматология</span>
+                        <span class="tag">Кожа</span>
+                        <span class="tag">Аллергия</span>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: var(--spacing-xl);">
+                    <a href="#" class="btn btn-outline">Показать больше вопросов</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ask Question Section -->
+    <section class="section" style="background-color: var(--light-green);" id="contact">
+        <div class="container">
+            <div style="max-width: 700px; margin: 0 auto;">
+                <h2 class="section-title">Задайте свой вопрос</h2>
+                <p class="section-subtitle">Опишите вашу проблему, и врач ответит в ближайшее время</p>
+                
+                <div class="card">
+                    <form>
+                        <div class="form-group">
+                            <label class="form-label">Ваше имя</label>
+                            <input type="text" class="form-input" placeholder="Введите ваше имя">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Возраст</label>
+                            <input type="number" class="form-input" placeholder="Ваш возраст">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Категория</label>
+                            <select class="form-input">
+                                <option>Выберите специализацию</option>
+                                <option>Терапевт</option>
+                                <option>Кардиолог</option>
+                                <option>Педиатр</option>
+                                <option>Дерматолог</option>
+                                <option>Невролог</option>
+                                <option>Другое</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Ваш вопрос</label>
+                            <textarea class="form-textarea" placeholder="Опишите ваши симптомы и вопрос подробно..."></textarea>
+                        </div>
+                        
+                        <div class="alert alert-info">
+                            💡 Подсказка: Чем подробнее вы опишете симптомы, тем точнее будет ответ врача
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                            Отправить вопрос
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <p class="section-subtitle">Преимущества онлайн консультаций с нашими специалистами</p>
+            
+            <div class="grid grid-3">
+                <div class="card text-center">
+                    <div style="font-size: 48px; margin-bottom: var(--spacing-md);">⚡</div>
+                    <h3 class="card-title">Быстро</h3>
+                    <p style="color: var(--gray);">
+                        Получите ответ врача в течение 24 часов. 
+                        Экстренные вопросы рассматриваются в первую очередь.
+                    </p>
+                </div>
+                
+                <div class="card text-center">
+                    <div style="font-size: 48px; margin-bottom: var(--spacing-md);">🏥</div>
+                    <h3 class="card-title">Профессионально</h3>
+                    <p style="color: var(--gray);">
+                        Все наши врачи имеют подтвержденную квалификацию 
+                        и многолетний опыт работы.
+                    </p>
+                </div>
+                
+                <div class="card text-center">
+                    <div style="font-size: 48px; margin-bottom: var(--spacing-md);">🔒</div>
+                    <h3 class="card-title">Конфиденциально</h3>
+                    <p style="color: var(--gray);">
+                        Ваши данные защищены. Все консультации проходят 
+                        в безопасной среде.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="section" style="background-color: var(--white);">
+        <div class="container">
+            <div class="grid grid-4">
+                <div class="text-center">
+                    <h3 style="font-size: 48px; font-weight: 700; color: var(--primary-green); margin-bottom: var(--spacing-sm);">
+                        50+
+                    </h3>
+                    <p style="color: var(--gray);">Квалифицированных врачей</p>
+                </div>
+                
+                <div class="text-center">
+                    <h3 style="font-size: 48px; font-weight: 700; color: var(--primary-green); margin-bottom: var(--spacing-sm);">
+                        10K+
+                    </h3>
+                    <p style="color: var(--gray);">Консультаций проведено</p>
+                </div>
+                
+                <div class="text-center">
+                    <h3 style="font-size: 48px; font-weight: 700; color: var(--primary-green); margin-bottom: var(--spacing-sm);">
+                        24ч
+                    </h3>
+                    <p style="color: var(--gray);">Среднее время ответа</p>
+                </div>
+                
+                <div class="text-center">
+                    <h3 style="font-size: 48px; font-weight: 700; color: var(--primary-green); margin-bottom: var(--spacing-sm);">
+                        98%
+                    </h3>
+                    <p style="color: var(--gray);">Довольных пациентов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>О платформе</h3>
+                    <p style="opacity: 0.8; line-height: 1.6;">
+                        Zamana.Green - современная платформа для получения медицинских консультаций онлайн. 
+                        Мы помогаем людям получить квалифицированную помощь быстро и удобно.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Навигация</h3>
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#doctors">Наши врачи</a></li>
+                        <li><a href="#questions">Вопросы и ответы</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Специализации</h3>
+                    <ul>
+                        <li><a href="#">Терапия</a></li>
+                        <li><a href="#">Кардиология</a></li>
+                        <li><a href="#">Педиатрия</a></li>
+                        <li><a href="#">Дерматология</a></li>
+                        <li><a href="#">Неврология</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>📧 info@zamana.green</li>
+                        <li>📱 +7 (XXX) XXX-XX-XX</li>
+                        <li>🕐 Круглосуточно</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Zamana.Green Framework. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navbar = document.querySelector('.navbar');
+            const menu = document.getElementById('navMenu');
+            
+            if (!navbar.contains(event.target) && menu.classList.contains('active')) {
+                menu.classList.remove('active');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    const menu = document.getElementById('navMenu');
+                    menu.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
